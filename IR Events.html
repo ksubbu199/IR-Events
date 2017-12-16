@@ -37,7 +37,11 @@
 
     }*/
 
-    .alchemy line:hover {stroke: red;}
+    /*.alchemy line:hover {stroke: red;}*/
+    #alchemy svg{
+      position: inherit;
+      left: inherit;
+    }
     </style>
     <script>
         Breakpoints();
@@ -3046,9 +3050,7 @@ People’s Republic of Korea
                   <hr class="widget-separator">
                   <div class="widget-body">
                     <script type="text/javascript">
-                        var file_path =
-'/static/alchemy_data/GOWSTNAT__USAGOV__KORGOV__KORMIL__RUS__USAGOVMIL__KOR__CHN__PRKGOV__PRKEDU2017-12-16
- 15:52:46.750311.json';
+                        var file_path = './IR Events_files/data.js';
                         // console.log("******************");
                         // console.log(data_str);
                         // var find = '&#34;';
@@ -3056,21 +3058,53 @@ People’s Republic of Korea
                         // data = JSON.parse(data_str.replace(re, '"'));
                         // console.log(data);
                         // data = JSON.stringify(data);
-                        console.log(file_path);
                         var config = {
-                          dataSource: file_path,
-                          forceLocked: false,
-                          linkDistance: function(){ return 40; },
-                          nodeColour: "#188ae2"
-                          nodeTypes: {"type":[]},
-                          caption: function(node){
-                              return node.caption;
-                          }
-                        };
+                           // file json da dove prendiamo i dati
+                           dataSource: file_path,
+                          backgroundColor: "#ffffff",
+                           // stile dei nodi,
+                           nodeStyle: {
+                               "all": {
+                                   "radius": 10,
+                                   "color": "#188ae2",
+                                   "borderColor": "none",
+                                   "captionColor": "#ff8888",
+                                   "captionBackground": null,
+                                   "captionSize": 12,
+                               }
+
+                           },
+                           // filtro base sui nodi
+                           nodeTypes: {
+                               "type": []
+                           },
+
+                           edgeStyle: {
+                             "all": {
+                                 color: "#000000",
+                                 width: 3,
+                                 opacity: 1
+                             }
+                          },
+
+                       };
+                        console.log(file_path);
+                        // var config = {
+                        //   dataSource: file_path,
+                        //   forceLocked: false,
+                        //   linkDistance: function(){ return 40; },
+                        //   nodeColour: "#188ae2"
+                        //   nodeTypes: {"type":[]},
+                        //   caption: function(node){
+                        //       return node.caption;
+                        //   }
+                        // };
 
                         alchemy = new Alchemy(config)
                       </script>
-                      <div id="alchemy" style="width:1119px; height:328px;"> <svg xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" pointer-events="all" style="background:#ffffff;" alchInst="0"><g transform="translate(0,0) scale(1)"><g id="edge-8-1-0" class="edge all active" source-target="8-1" style="stroke: rgb(204, 204, 204); stroke-width: 4; opacity: 0.2; fill: none;" transform="translate(302.20698703058616, 251.05135132254424) rotate(-1.135972401618764)"><path class="edge-line" id="path-8-1" d="M12,0q75.48179096073278,0 142.63024858813222,0"></path><text dx="75.48179096073278" xlink:href="#path-8-1">NORTH KOREA,SOUTH KOREA,NORTH KOREA MILITARY ALLY</text><path class="edge-handler" style="stroke-width: 20; opacity: 0;" d="M12,0q75.48179096073278,0 142.63024858813222,0"></path></g><g id="edge-1-9-0" class="edge all active" source-target="1-9" style="stroke: rgb(204, 204, 204); stroke-width: 4; opacity: 0.2; fill: none;" transform="translate(469.47102211896583, 247.7346632569191) rotate(95.1201290637707)"><path class="edge-line" id="path-1-9" d="M12,0q55.35223023390831,0 102.37112713448329,0"></path><text dx="55.35223023390831" xlink:href="#path-1-9">NORTH
+                      <div id="alchemy" style="width:1119px; height:328px;">
+                      <!--  <svg xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" pointer-events="all" style="background:#ffffff;" alchInst="0"><g transform="translate(0,0) scale(1)"><g id="edge-8-1-0" class="edge all active" source-target="8-1" style="stroke: rgb(204, 204, 204); stroke-width: 4; opacity: 0.2; fill: none;" transform="translate(302.20698703058616, 251.05135132254424) rotate(-1.135972401618764)"><path class="edge-line" id="path-8-1" d="M12,0q75.48179096073278,0 142.63024858813222,0"></path>
+                      <text dx="75.48179096073278" xlink:href="#path-8-1">NORTH KOREA,SOUTH KOREA,NORTH KOREA MILITARY ALLY</text><path class="edge-handler" style="stroke-width: 20; opacity: 0;" d="M12,0q75.48179096073278,0 142.63024858813222,0"></path></g><g id="edge-1-9-0" class="edge all active" source-target="1-9" style="stroke: rgb(204, 204, 204); stroke-width: 4; opacity: 0.2; fill: none;" transform="translate(469.47102211896583, 247.7346632569191) rotate(95.1201290637707)"><path class="edge-line" id="path-1-9" d="M12,0q55.35223023390831,0 102.37112713448329,0"></path><text dx="55.35223023390831" xlink:href="#path-1-9">NORTH
  KOREA,US ALLIANCE MISSILE PROGRAM SOUTH KOREA,SOUTH KOREA,CHINAS ANGER
 US MISSILE DEFENCE SYSTEM COUNTRYS NUCLEAR WEAPONS PROGRAMME SOUTH
 KOREA,SOUTH KOREA STRICTER SANCTIONS</text><path class="edge-handler" style="stroke-width: 20; opacity: 0;" d="M12,0q55.35223023390831,0 102.37112713448329,0"></path></g><g id="edge-2-3-0" class="edge all active" source-target="2-3" style="stroke: rgb(204, 204, 204); stroke-width: 4; opacity: 0.2; fill: none;" transform="translate(411.5579322077017, 236.02743000503435) rotate(66.65619003965286)"><path class="edge-line" id="path-2-3" d="M12,0q21.199105330427308,0 34.06487732752128,0"></path><text dx="21.199105330427308" xlink:href="#path-2-3">DEVASTATING
@@ -3217,12 +3251,13 @@ US MISSILE DEFENCE SYSTEM COUNTRYS NUCLEAR WEAPONS PROGRAMME SOUTH
 KOREA,SOUTH KOREA STRICTER SANCTIONS</text><path class="edge-handler" style="stroke-width: 20; opacity: 0;" d="M12,0q64.77007489372974,0 121.20681645412616,0"></path></g><g id="edge-3-14-0" class="edge all active" source-target="3-14" style="stroke: rgb(204, 204, 204); stroke-width: 4; opacity: 0.2; fill: none;" transform="translate(434.8301688917721, 289.9514252173871) rotate(-131.46197320206124)"><path class="edge-line" id="path-3-14" d="M12,0q63.17661674890982,0 118.01990016448632,0"></path><text dx="63.17661674890982" xlink:href="#path-3-14">TIMES LOCAL SPORTS DIPLOMACY ESCALATING TENSIONS SOUTH KOREA NUCLEAR WEAPONS PROGRAM</text><path class="edge-handler" style="stroke-width: 20; opacity: 0;" d="M12,0q63.17661674890982,0 118.01990016448632,0"></path></g><g id="edge-10-3-0" class="edge all active" source-target="10-3" style="stroke: rgb(204, 204, 204); stroke-width: 4; opacity: 0.2; fill: none;" transform="translate(579.706333130291, 238.37390276635531) rotate(160.4037061069517)"><path class="edge-line" id="path-10-3" d="M12,0q68.72504905527083,0 129.11676477720832,0"></path><text dx="68.72504905527083" xlink:href="#path-10-3">WEIGHT LIMIT NORTH KOREA NORTH KOREA THREAT</text><path class="edge-handler" style="stroke-width: 20; opacity: 0;" d="M12,0q68.72504905527083,0 129.11676477720832,0"></path></g><g id="edge-3-9-0" class="edge all active" source-target="3-9" style="stroke: rgb(204, 204, 204); stroke-width: 4; opacity: 0.2; fill: none;" transform="translate(434.8301688917721, 289.9514252173871) rotate(74.54980642575823)"><path class="edge-line" id="path-3-9" d="M12,0q35.570967810786215,0 62.80860228823909,0"></path><text dx="35.570967810786215" xlink:href="#path-3-9">NORTH
  KOREA,US ALLIANCE MISSILE PROGRAM SOUTH KOREA,SOUTH KOREA,CHINAS ANGER
 US MISSILE DEFENCE SYSTEM COUNTRYS NUCLEAR WEAPONS PROGRAMME SOUTH
-KOREA,SOUTH KOREA STRICTER SANCTIONS</text><path class="edge-handler" style="stroke-width: 20; opacity: 0;" d="M12,0q35.570967810786215,0 62.80860228823909,0"></path></g><g id="edge-1-14-0" class="edge all active" source-target="1-14" style="stroke: rgb(204, 204, 204); stroke-width: 4; opacity: 0.2; fill: none;" transform="translate(469.47102211896583, 247.7346632569191) rotate(-153.38050261128765)"><path class="edge-line" id="path-1-14" d="M12,0q64.04621020779535,0 119.75908708225738,0"></path><text dx="64.04621020779535" xlink:href="#path-1-14">TIMES LOCAL SPORTS DIPLOMACY ESCALATING TENSIONS SOUTH KOREA NUCLEAR WEAPONS PROGRAM</text><path class="edge-handler" style="stroke-width: 20; opacity: 0;" d="M12,0q64.04621020779535,0 119.75908708225738,0"></path></g><g class="node active" id="node-1" transform="translate(469.47102211896583,247.7346632569191)"><circle id="circle-1" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-1" dy="15" visibility="visible">KOR</text></g><g class="node active" id="node-2" transform="translate(411.5579322077017,236.02743000503435)"><circle id="circle-2" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-2" dy="15" visibility="visible">PRK</text></g><g class="node active" id="node-3" transform="translate(434.8301688917721,289.9514252173871)"><circle id="circle-3" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-3" dy="15" visibility="visible">USA</text></g><g class="node active" id="node-4" transform="translate(381.7210909718022,144.14921978125378)"><circle id="circle-4" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-4" dy="15" visibility="visible">USAGOV</text></g><g class="node active" id="node-5" transform="translate(440.38568041509023,116.98559310220996)"><circle id="circle-5" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-5" dy="15" visibility="visible">USAMIL</text></g><g class="node active" id="node-6" transform="translate(571.6194188505789,300.87961008589707)"><circle id="circle-6" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-6" dy="15" visibility="visible">KORGOV</text></g><g class="node active" id="node-7" transform="translate(347.8448304863703,346.6597571157692)"><circle id="circle-7" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-7" dy="15" visibility="visible">PRKGOV</text></g><g class="node active" id="node-8" transform="translate(302.20698703058616,251.05135132254424)"><circle id="circle-8" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-8" dy="15" visibility="visible">RUS</text></g><g class="node active" id="node-9" transform="translate(458.13363343217145,374.2655475169607)"><circle id="circle-9" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-9" dy="15" visibility="visible">CHN</text></g><g class="node active" id="node-10" transform="translate(579.706333130291,238.37390276635531)"><circle id="circle-10" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-10" dy="15" visibility="visible">RUSGOV</text></g><g class="node active" id="node-11" transform="translate(510.69552986293206,305.249589838377)"><circle id="circle-11" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-11" dy="15" visibility="visible">KORMIL</text></g><g class="node active" id="node-12" transform="translate(516.1347841329167,136.30318836459017)"><circle id="circle-12" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-12" dy="15" visibility="visible">PRKEDU</text></g><g class="node active" id="node-13" transform="translate(548.0413954096291,191.476876148396)"><circle id="circle-13" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-13" dy="15" visibility="visible">KORMED</text></g><g class="node active" id="node-14" transform="translate(340.35413606158176,183.0227780982456)"><circle id="circle-14" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-14" dy="15" visibility="visible">JPN</text></g><g class="node active" id="node-15" transform="translate(466.74586479752435,175.82436649427976)"><circle id="circle-15" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-15" dy="15" visibility="visible">USAGOVMIL</text></g><g class="node active" id="node-16" transform="translate(396.47372557646946,364.9429783490112)"><circle id="circle-16" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-16" dy="15" visibility="visible">IGOWSTNAT</text></g><g class="node active" id="node-17" transform="translate(347.8707157617378,275.22299427068174)"><circle id="circle-17" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-17" dy="15" visibility="visible">KORCVL</text></g><g class="node active" id="node-18" transform="translate(510.5691178845019,376.10291071237464)"><circle id="circle-18" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-18" dy="15" visibility="visible">IGOUNO</text></g></g></svg></div>
+KOREA,SOUTH KOREA STRICTER SANCTIONS</text><path class="edge-handler" style="stroke-width: 20; opacity: 0;" d="M12,0q35.570967810786215,0 62.80860228823909,0"></path></g><g id="edge-1-14-0" class="edge all active" source-target="1-14" style="stroke: rgb(204, 204, 204); stroke-width: 4; opacity: 0.2; fill: none;" transform="translate(469.47102211896583, 247.7346632569191) rotate(-153.38050261128765)"><path class="edge-line" id="path-1-14" d="M12,0q64.04621020779535,0 119.75908708225738,0"></path><text dx="64.04621020779535" xlink:href="#path-1-14">TIMES LOCAL SPORTS DIPLOMACY ESCALATING TENSIONS SOUTH KOREA NUCLEAR WEAPONS PROGRAM</text><path class="edge-handler" style="stroke-width: 20; opacity: 0;" d="M12,0q64.04621020779535,0 119.75908708225738,0"></path></g><g class="node active" id="node-1" transform="translate(469.47102211896583,247.7346632569191)"><circle id="circle-1" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-1" dy="15" visibility="visible">KOR</text></g><g class="node active" id="node-2" transform="translate(411.5579322077017,236.02743000503435)"><circle id="circle-2" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-2" dy="15" visibility="visible">PRK</text></g><g class="node active" id="node-3" transform="translate(434.8301688917721,289.9514252173871)"><circle id="circle-3" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-3" dy="15" visibility="visible">USA</text></g><g class="node active" id="node-4" transform="translate(381.7210909718022,144.14921978125378)"><circle id="circle-4" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-4" dy="15" visibility="visible">USAGOV</text></g><g class="node active" id="node-5" transform="translate(440.38568041509023,116.98559310220996)"><circle id="circle-5" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-5" dy="15" visibility="visible">USAMIL</text></g><g class="node active" id="node-6" transform="translate(571.6194188505789,300.87961008589707)"><circle id="circle-6" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-6" dy="15" visibility="visible">KORGOV</text></g><g class="node active" id="node-7" transform="translate(347.8448304863703,346.6597571157692)"><circle id="circle-7" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-7" dy="15" visibility="visible">PRKGOV</text></g><g class="node active" id="node-8" transform="translate(302.20698703058616,251.05135132254424)"><circle id="circle-8" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-8" dy="15" visibility="visible">RUS</text></g><g class="node active" id="node-9" transform="translate(458.13363343217145,374.2655475169607)"><circle id="circle-9" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-9" dy="15" visibility="visible">CHN</text></g><g class="node active" id="node-10" transform="translate(579.706333130291,238.37390276635531)"><circle id="circle-10" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-10" dy="15" visibility="visible">RUSGOV</text></g><g class="node active" id="node-11" transform="translate(510.69552986293206,305.249589838377)"><circle id="circle-11" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-11" dy="15" visibility="visible">KORMIL</text></g><g class="node active" id="node-12" transform="translate(516.1347841329167,136.30318836459017)"><circle id="circle-12" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-12" dy="15" visibility="visible">PRKEDU</text></g><g class="node active" id="node-13" transform="translate(548.0413954096291,191.476876148396)"><circle id="circle-13" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-13" dy="15" visibility="visible">KORMED</text></g><g class="node active" id="node-14" transform="translate(340.35413606158176,183.0227780982456)"><circle id="circle-14" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-14" dy="15" visibility="visible">JPN</text></g><g class="node active" id="node-15" transform="translate(466.74586479752435,175.82436649427976)"><circle id="circle-15" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-15" dy="15" visibility="visible">USAGOVMIL</text></g><g class="node active" id="node-16" transform="translate(396.47372557646946,364.9429783490112)"><circle id="circle-16" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-16" dy="15" visibility="visible">IGOWSTNAT</text></g><g class="node active" id="node-17" transform="translate(347.8707157617378,275.22299427068174)"><circle id="circle-17" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-17" dy="15" visibility="visible">KORCVL</text></g><g class="node active" id="node-18" transform="translate(510.5691178845019,376.10291071237464)"><circle id="circle-18" r="10" style="fill: rgb(104, 185, 254); stroke: rgb(18, 125, 193); stroke-width: 3.33333;"></circle><text id="text-18" dy="15" visibility="visible">IGOUNO</text></g></g></svg>
+--></div>
 
                   </div>
                 </div>
               </div>
-              <div class="col-md-12" style="margin-top:10%">
+              <div class="col-md-12">
                 <div class="widget">
                   <header class="widget-header">
                     <h4 class="widget-title">Word Cloud</h4></header>
